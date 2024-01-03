@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="main-container" style="background-color: wheat;">
+        <div id="left-div" class="left-div" style="background-color: wheat;">
+            <div class="left-div-child" style="width: 100%;">
+                <div class="navbar-title">
+                    <a href="../" id="site-title" class="site-title">QUẢN LÝ NHÀ TRỌ</a>
+                </div>
+                <div class="navbar-info" style="text-align: center; padding: 10px;">
+                    <h4>Rental House</h4>
+                </div>
+                <div class="profile" style="text-align: center; padding: 10px;">
+                    <span class="div-greeting">Xin chào, Admin</span>
+                </div>
+                <div class="sidebar-menu" style="margin-top: 10px;">
+                    <div class="nav-side-menu">
+                        <div class="menu-seciton">
+                            <ul class="nav-side-menu">
+                                <li><a href="./index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+                                <li><a href="./phong.html"><i class="fa-solid fa-building"></i>Phòng</a>
+                                </li>
+                                <li><a href="./dichvu.html" class="active"><i class="fa-solid fa-cubes"></i>Dịch vụ</a>
+                                </li>
+                                <li><a href=""><i class="fa-solid fa-bolt"></i>Chỉ số điện</a></li>
+                                <li><a href=""><i class="fa-solid fa-shower"></i>Chỉ số nước</a></li>
+                                <li><a href=""><i class="fa-solid fa-calculator"></i>Tính tiền</a></li>
+                                <li><a href="./canhan.html"><i class="fa-solid fa-user"></i>Thông tin cá nhân</a></li>
+                                <li><a href=""><i class="fa-solid fa-key"></i>Đổi mật khẩu</a></li>
+                                <li><a href=""><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <a href=""><i class="fa-solid fa-key"></i></a>
+                    <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="right-container" class="right-container">
+            <div class="top-nav">
+                <div class="nav-menu">
+                    <nav>
+                        <div class="left-toggle">
+                            <a href=""><i class="fa-solid fa-bars"></i></a>
+                        </div>
+                        <div class="right-toggle">
+                            <button class="btn btn-primary"><i class="fa fa-sticky-note"></i></button>
+                            <button class="btn btn-secondary"><i class="fa fa-calculator"></i></button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="right-div"
+                style="background-color: aqua; display: flex; flex-direction: column; justify-content: space-around; width: 100%; flex-wrap: wrap;">
+                <!-- table -->
+                <div class="flex flex-col border m-2 border-slate-700 pb-8">
+                    <div class="flex justify-between sm:flex-row flex-col border-b border-gray-300 ml-4 mr-4">
+                        <h1 class="text-lg m-2 font-bold">Danh Sách Dịch Vụ</h1>
+                        <div class="m-2">
+                            <button type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"><i
+                                    class="fa-solid fa-plus mr-1"></i>Thêm dịch vụ</button>
+                            <button type="button"
+                                class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:bg-red-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600"><i
+                                    class="fa-solid fa-close mr-1"></i>Xóa</button>
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        Tìm:
+                        <input type="text" id="search" placeholder="Nhập ten dich vu.." class="w-[200px] m-2">
+                    </div>
+                    <!-- table -->
+                    <div
+                        class="relative overflow-x-auto shadow-md sm:rounded-lg m-4 overflow-y-auto max-h-[300px] max-w-[350px] sm:max-h-[400px] sm:max-w-full">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        Product name
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Color
+                                            <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Category
+                                            <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Price
+                                            <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <span class="sr-only">Edit</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Silver
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-2">Edit</a>
+                                        <a href="#"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Silver
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-2">Edit</a>
+                                        <a href="#"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Silver
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-2">Edit</a>
+                                        <a href="#"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Microsoft Surface Pro
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        White
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Laptop PC
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $1999
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-2">Edit</a>
+                                        <a href="#"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Magic Mouse 2
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Black
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Accessories
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $99
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline pr-2">Edit</a>
+                                        <a href="#"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+                    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                        <span class="text-lg text-gray-500 sm:text-center dark:text-gray-400">
+                            Nếu như có thắc mắc hoặc có những góp ý về phần mềm này, vui lòng liện hệ qua:
+                        </span>
+                        <ul
+                            class="flex flex-wrap flex-col  mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                            <li>
+                                Email: ronald.mai.goldenowl@gmail.com
+                            </li>
+                            <li>
+                                SĐT: 123456789
+                            </li>
+                            <li>
+                                Địa chỉ: số A, đường B, Phường C, Quận D
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

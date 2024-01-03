@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
             navLinks.forEach(function (navLink){
                 navLink.classList.remove('active');
             })
+            location.href = link.getAttribute('href');
             link.classList.add('active');
         })
     })
@@ -50,28 +51,19 @@ document.addEventListener('DOMContentLoaded', function(event){
         
         }
     })
-    //     if(!check && windowWidth > 991){
-    //     } else if(!check && windowWidth < 991){
-    //         document.getElementById("left-div").style.display = "none";
-    //         document.getElementById("right-container").style.marginLeft = "0";
-    //         check = true;
-    //     } 
-    //      else{
-    //         document.getElementById("left-div").style.display = "block";
-    //         document.getElementById("right-container").style.marginLeft = "80px"
-    //         document.querySelector("body").classList.add('nav-sm');
-    //         document.getElementById("site-title").innerText = "QLNT"
-    //         check = false;
-    //     }
-    // })
-    let check2 = false;
     window.addEventListener('resize', function () {
+     
         if (window.innerWidth > 991) {
             this.document.getElementById("right-container").style.marginLeft = "230px";
             document.getElementById("left-div").style.display = "block";
+            document.querySelector("body").classList.remove('nav-sm');
+            document.getElementById("site-title").innerText = "QUẢN LÝ NHÀ TRỌ"
+            check = true;
         } else {
             this.document.getElementById("right-container").style.marginLeft = "0";
             this.document.getElementById("left-div").style.display = "none";
+            check = true;
         }
+
     });
 })

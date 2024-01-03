@@ -164,7 +164,6 @@ body{
     float: left;
     background: #EDEDED;
     border-bottom:1px solid #D9DEE4 ;
-    margin-bottom: 10px;
     width: 100%;
     position: relative;
 }
@@ -223,3 +222,12 @@ body{
         display: none;
     }
 } */
+
+@media screen and (max-width: 991px) {
+    .left-div{
+        display: none;
+    }
+    .right-container{
+        margin-left: 0px;
+    }
+}
